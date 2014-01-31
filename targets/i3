@@ -1,0 +1,15 @@
+#!/bin/sh -e
+# Copyright (c) 2013 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+REQUIRES='gtk-extra'
+DESCRIPTION='Installs the enlightenment desktop environment. (Approx. 50MB)'
+HOSTBIN='starti3'
+. "${TARGETSDIR:="$PWD"}/common"
+
+### Append to prepare.sh:
+install i3
+
+TIPS="$TIPS
+You can start i3 via the starti3 host command: sudo starti3
+"
